@@ -1,17 +1,36 @@
 import "./navBar.css";
-import { CartWidget } from "../cartWidget/CartWidget";
+import CartWidget from "../cartWidget/CartWidget";
+import { Link, Outlet } from "react-router-dom";
 
-export const NavBar = () => {
+const NavBar = () => {
   return (
-    <div className="navConteiner">
-      <ul className="categorias">
-        <li className="catVehiculos">Adidas</li>
-        <li className="catVehiculos">Puma</li>
-        <li className="catVehiculos">Nike</li>
-        <li className="catVehiculos">Todos</li>
-      </ul>
-      <CartWidget />
-      <span>4</span>
-    </div>
+    <>
+      <Link to="/">
+        <img
+          src="https://res.cloudinary.com/dd7mfvnx8/image/upload/v1720400642/3dedos_zisvgq.png"
+          alt="logo 3 dedos"
+          style={{ width: "200px", objectFit: "cover" }}
+        />
+      </Link>
+      <div className="navConteiner">
+        <ul className="categorias">
+          <Link to="/category/Adidas" className="catBotines">
+            Adidas
+          </Link>
+          <Link to="/category/Puma" className="catBotines">
+            Puma
+          </Link>
+          <Link to="/category/Nike" className="catBotines">
+            Nike
+          </Link>
+          <Link to="/" className="catBotines">
+            Todos
+          </Link>
+        </ul>
+        <CartWidget />
+      </div>
+      <Outlet />
+    </>
   );
 };
+export default NavBar;

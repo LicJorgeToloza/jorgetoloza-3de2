@@ -1,25 +1,21 @@
 .navConteiner {
-    background-color: #1a4e52;
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    align-items: center;
-    color: #78cc47;
-   
+  background-color: #1a4e52;
+  display: flex;
+  width: 100%;
+  margin-block-end: 30px;
+  justify-content: space-between;
+  align-items: center;
+  color: #78cc47;
 }
 
 .h3 {
-    color: #1a4e52;
-    text-align: center;
-  }
+  color: #1a4e52;
+  text-align: center;
+}
 
 .categorias {
-    display: flex;
-    list-style: none;
-    gap: 3rem;
-    margin: 20px;
-}
-.catVehiculos{
-    border-color: #1a4e52;
-    border: 2px;
+  display: flex;
+  list-style: none;
+  gap: 3rem;
+  margin: 20px;
 }

@@ -1,9 +1,15 @@
-import { PiSoccerBallFill } from "react-icons/pi";
+import { Badge } from "@mui/material";
+import { Link } from "react-router-dom";
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 
-export const CartWidget = () => {
+const CartWidget = () => {
   return (
-    <div>
-      <PiSoccerBallFill color="#cfcba6" size={25} />
-    </div>
+    <link to="/cart">
+      <Badge badgeContent={0} color="primary" showZero={true}>
+        <ShoppingCartIcon color="action" />
+      </Badge>
+    </link>
   );
 };
+
+export default CartWidget;
